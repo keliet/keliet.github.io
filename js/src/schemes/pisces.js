@@ -14,18 +14,4 @@ $(document).ready(function () {
       setSidebarMarginTop(getSidebarTop());
     }
   });
-
-
-
-	$('.btn').hide();
-
-	$('.post-body').click(function(){
-		var h = $(this).find('.btn').attr('href');
-		window.location.href = h;
-	});
-
-
-	
-
-
 });

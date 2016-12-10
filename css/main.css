@@ -455,11 +455,11 @@ body {
 .header-inner {
   margin: 0 auto;
   padding: 100px 0 70px;
-  width: 900px;
+  width: 1000px;
 }
 @media (min-width: 1600px) {
   .container .header-inner {
-    width: 900px;
+    width: 1000px;
   }
 }
 .main {
@@ -467,11 +467,11 @@ body {
 }
 .main-inner {
   margin: 0 auto;
-  width: 900px;
+  width: 1000px;
 }
 @media (min-width: 1600px) {
   .container .main-inner {
-    width: 900px;
+    width: 1000px;
   }
 }
 .footer {
@@ -484,12 +484,54 @@ body {
 .footer-inner {
   box-sizing: border-box;
   margin: 20px auto;
-  width: 900px;
+  width: 1000px;
 }
 @media (min-width: 1600px) {
   .container .footer-inner {
-    width: 900px;
+    width: 1000px;
   }
+}
+.posts-index .post-type-normal {
+  float: left;
+  margin: 0 1% 20px;
+  width: 31.3%;
+}
+.posts-index a.post-title-link {
+  font-weight: normal;
+  font-size: 16px;
+  height: 25px;
+  line-height: 25px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.posts-index .post-more-link {
+  display: none;
+}
+.posts-index .post-header div.post-meta {
+  margin: 0;
+  text-align: left;
+}
+.posts-index .post-header h1.post-title {
+  text-align: left;
+  line-height: 1;
+}
+.posts-index footer.post-footer {
+  display: none;
+}
+.posts-index div.post-body p {
+  margin-bottom: 10px;
+}
+.posts-index div.post-body p img:hover {
+  border: 1px solid #000;
+  cursor: pointer;
+}
+.posts-index header.post-header .post-category a {
+  border: 0;
+}
+body {
+  margin-top: 20px;
 }
 pre,
 .highlight {
@@ -984,8 +1026,8 @@ pre .javascript .function {
   position: relative;
 }
 .headband {
-  height: 10px;
-  background: none;
+  height: 3px;
+  background: $headband-bg;
 }
 .site-meta {
   margin: 0;
@@ -1140,6 +1182,9 @@ pre .javascript .function {
   -ms-transform: rotate(30deg);
   -o-transform: rotate(30deg);
   transform: rotate(30deg);
+}
+.posts-expand {
+  padding-top: 40px;
 }
 @media (max-width: 767px) {
   .posts-expand {
@@ -1678,7 +1723,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9d9630;
+  background: #616c77;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2449,7 +2494,7 @@ body {
 .header {
   position: relative;
   margin: 0 auto;
-  width: 1160px;
+  width: 1280px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .header {
@@ -2505,7 +2550,7 @@ body {
   }
 }
 .container .main-inner {
-  width: 1160px;
+  width: 1280px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .container .main-inner {
@@ -2520,8 +2565,8 @@ body {
 .content-wrap {
   float: right;
   box-sizing: border-box;
-  padding: 30px;
-  width: 900px;
+  padding: 40px;
+  width: 1000px;
   background: #fff;
   min-height: 700px;
 }
@@ -2560,7 +2605,7 @@ body {
   display: none;
 }
 .footer-inner {
-  width: 1160px;
+  width: 1280px;
 }
 .footer-inner:before {
   content: " ";
@@ -2656,7 +2701,7 @@ body {
 }
 .menu .menu-item a:hover,
 .menu-item-active a {
-  background: #f9f9f9;
+  background: #fcfcfc;
   border-bottom-color: #fff;
 }
 .menu .menu-item br {
