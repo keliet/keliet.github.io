@@ -1,0 +1,78 @@
+//
+// Layout
+// Note: Must name this file "outline" instead of "layout"
+//       Or Hexo will use it as template layout.
+// =================================================
+
+
+html, body { height: 100%;  }
+
+.container {
+  position: relative;
+  min-height: 100%;
+
+}
+
+
+// Header Section
+// --------------------------------------------------
+.header-inner {
+  margin: 0 auto;
+  padding: 100px 0 70px;
+  width: $content-desktop;
+
+  +desktop-large() {
+    .container & { width: $content-desktop-large; }
+  }
+}
+
+// Main Section
+// --------------------------------------------------
+.main { padding-bottom: $footer-height + $gap-between-main-and-footer; }
+.main-inner {
+  margin: 0 auto;
+  width: $content-desktop;
+
+  +desktop-large() {
+    .container & { width: $content-desktop-large; }
+  }
+
+}
+
+
+// Footer Section
+// --------------------------------------------------
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: $footer-height;
+}
+.footer-inner {
+  box-sizing: border-box;
+  margin: 20px auto;
+  width: $content-desktop;
+
+  +desktop-large() {
+    .container & { width: $content-desktop-large; }
+  }
+}
+
+
+
+.posts-index .post-type-normal {
+    float: left;
+    margin: 0 1% 20px;
+    width: 31.3%;
+}
+.posts-index a.post-title-link{ font-weight:normal; font-size:16px; height:25px; line-height:25px; width:100%;  overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+.posts-index .post-more-link { display:none;}
+.posts-index .post-header div.post-meta{ margin:0;text-align:left;}
+.posts-index .post-header h1.post-title{ text-align:left; line-height:1.0}
+.posts-index footer.post-footer{ display:none;}
+.posts-index div.post-body p{ margin-bottom:10px; }
+.posts-index div.post-body p img:hover{border:1px solid #000; cursor:pointer}
+.posts-index header.post-header{}
+.posts-index header.post-header .post-category a{border:0}
+body{margin-top:20px}
