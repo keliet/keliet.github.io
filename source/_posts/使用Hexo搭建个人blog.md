@@ -6,7 +6,8 @@ tags:
   - Github
 date: 2016-12-15
 ---
-![](https://oi4b45295.qnssl.com/Hexo_title.png)
+![](https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/Hexo_title.png)
+
 <!--more-->
 # 搭建过程
 在开始之前，简单说明一下整个博客的一个搭建过程：
@@ -34,7 +35,7 @@ hexo init
 ```
 成功后，会在选中目录中自动生成如下结构
 
-![](https://oi4b45295.qnssl.com/hexo_1.png)
+![](https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/hexo_1.png)
 **安装依赖包**
 ```
  npm install
@@ -60,7 +61,7 @@ INFO  Start processing
 INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
 ```
 在浏览器中地址栏输入`localhost:4000`就可以看到本地部署的效果了，就如下图的样子，这里的是本地博客，其他地方还看不到的；
-![](https://oi4b45295.qnssl.com/hexo_2.png)
+![](https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/hexo_2.png)
 ## 安装Hexo主题
 使用Hexo更换主题还算方便，先使用克隆命令安装好主题，然后更改一下博客的配置文件D:\blog\_config.yml里面的主题名称就好了。关于主题的选择，每个人的喜好不同，你可以到[Hexo官方主题](https://hexo.io/themes/)页面选择自己喜欢的主题。我选用的是经过自己修改的NexT主题。后面都是针对于NexT主题的介绍。说明一点：使用他人的主题，一定要保留主题作者的信息（在博客最下面显示），表示对作者的尊重。
 遇到喜欢的主题后，找到主题的github链接；在blog目录下右键单击选择`Git Bash`，输入以下命令：
@@ -268,9 +269,9 @@ deploy:
 因为发布后是覆盖方式，即后一次的发布将完全覆盖上次的发布，如果你有多台电脑，而且每台电脑你都有可能会写博客。那么这个时候就需要对Hexo进行版本控制了。版本控制的主要目的是方便在不同的电脑维护Hexo及写作。这里利用github的分支来保存hexo框架的相关文件(hexo配置、md、主题等文件)到github page仓库。
 
 **新建Hexo分支**page仓库的master分支用来存放网站文件的，这是GitHub Page的要求，所以只好新建分支来保存Hexo原始文件，在下图的输入框输入分支名并按回车即完成分支创建。
-![](https://oi4b45295.qnssl.com/hexo_3.png)
+![](https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/hexo_3.png)
 **设置默认分支**因为我们写博客更多的是更新这个分支，网站文件所在的master分支则由hexo d命令发布文章的时候进行发布，所以我们将hexo分支>设置为默认分支，这样我们在新的电脑环境下git clone该仓库时，自动切到hexo分支。按下图进行操作。
-![](https://oi4b45295.qnssl.com/hexo_4.png)
+![](https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/hexo_4.png)
 
 然后使用部署命令`hexo g -d`就会自动渲染Markdown文件生成静态文件（public文件夹下所有文件）并部署到yourname.github.io仓库的master分支上，这时再访问http://yourname.github.io 就可以看到博客页面了。
 ## 拷贝仓库
@@ -280,7 +281,7 @@ git clone https://github.com/yourname/yourname.github.io.git
 ```
 ## 部署要上传hexo配置
 在新创建的文件夹中，将本地修改好的hexo配置文件拷贝到新创建的目录；需要拷贝的内容见下图；（以下是必须要拷贝的内容）
-![](https://oi4b45295.qnssl.com/hexo_5.png)
+![](https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/hexo_5.png)
 完成以上的拷贝后就可以提交到hexo分支了。
 ## 提交网站相关文件
 在新创建的目录中执行以下命令：（用于将hexo配置及主题配置提交到github）
@@ -333,3 +334,5 @@ date: 2016-12-15  #日期
 这之后就是文章正文了
 ```
 写文章本人采用[Markdown pad 2](http://markdownpad.com/)
+
+
