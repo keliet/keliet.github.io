@@ -64,16 +64,16 @@
 <meta property="og:url" content="http://yoursite.com/2016/12/15/使用Hexo搭建个人blog/index.html">
 <meta property="og:site_name" content="Keliet">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://oi4b45295.qnssl.com/Hexo_title.png">
-<meta property="og:image" content="https://oi4b45295.qnssl.com/hexo_1.png">
-<meta property="og:image" content="https://oi4b45295.qnssl.com/hexo_2.png">
-<meta property="og:image" content="https://oi4b45295.qnssl.com/hexo_3.png">
-<meta property="og:image" content="https://oi4b45295.qnssl.com/hexo_4.png">
-<meta property="og:image" content="https://oi4b45295.qnssl.com/hexo_5.png">
-<meta property="og:updated_time" content="2019-01-04T09:57:26.608Z">
+<meta property="og:image" content="https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/Hexo_title.png">
+<meta property="og:image" content="https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/hexo_1.png">
+<meta property="og:image" content="https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/hexo_2.png">
+<meta property="og:image" content="https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/hexo_3.png">
+<meta property="og:image" content="https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/hexo_4.png">
+<meta property="og:image" content="https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/hexo_5.png">
+<meta property="og:updated_time" content="2019-01-04T10:10:45.358Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Hexo搭建个人blog">
-<meta name="twitter:image" content="https://oi4b45295.qnssl.com/Hexo_title.png">
+<meta name="twitter:image" content="https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/Hexo_title.png">
 
 
 
@@ -319,7 +319,8 @@
       
 
       
-        <p><img src="https://oi4b45295.qnssl.com/Hexo_title.png" alt=""><br><a id="more"></a></p>
+        <p><img src="https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/Hexo_title.png" alt=""></p>
+<a id="more"></a>
 <h1 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h1><p>在开始之前，简单说明一下整个博客的一个搭建过程：</p>
 <ul>
 <li><strong>本地部署</strong></li>
@@ -334,11 +335,11 @@
 <p>其中<code>-g</code>代表使用全局安装；卸载的话，将上面的命令中的<code>intall</code>更换为<code>uninstall</code>就可以了。</p>
 <h2 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h2><p>在某个盘符下创建一个目录，重命名（最好是英文），例如你在D盘中创建了一个blog目录，那么路径就是D:\blog，后续的很多操作都会在这个目录中；在该目录单击右键，选择<code>Git bash</code>，输入以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure></p>
 <p>成功后，会在选中目录中自动生成如下结构</p>
-<p><img src="https://oi4b45295.qnssl.com/hexo_1.png" alt=""><br><strong>安装依赖包</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/hexo_1.png" alt=""><br><strong>安装依赖包</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure></p>
 <p>成功后，会在选中目录中自动生成<code>node_modules</code>目录；一系列的安装后，本地博客就搭建完毕了，输入如下的命令（也可以利用组合命令）先输入<code>hexo g</code>再输入<code>hexo s</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">D:\blog&gt; hexo g</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 558 ms</span><br><span class="line">INFO  Generated:</span><br><span class="line">\\省略部分结果</span><br></pre></td></tr></table></figure></p>
 <p>使用<code>hexo g</code>，不出意外，会在blog目录中生成public目录和db.json文件，其中public就是我们博客的静态页面，远程部署的时候就是将该目录中的所有文件上传至服务器。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">D:\blog&gt; hexo s</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure></p>
 <p>组合命令：<code>hexo s -g</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">D:\blog&gt; hexo s -g</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure></p>
-<p>在浏览器中地址栏输入<code>localhost:4000</code>就可以看到本地部署的效果了，就如下图的样子，这里的是本地博客，其他地方还看不到的；<br><img src="https://oi4b45295.qnssl.com/hexo_2.png" alt=""></p>
+<p>在浏览器中地址栏输入<code>localhost:4000</code>就可以看到本地部署的效果了，就如下图的样子，这里的是本地博客，其他地方还看不到的；<br><img src="https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/hexo_2.png" alt=""></p>
 <h2 id="安装Hexo主题"><a href="#安装Hexo主题" class="headerlink" title="安装Hexo主题"></a>安装Hexo主题</h2><p>使用Hexo更换主题还算方便，先使用克隆命令安装好主题，然后更改一下博客的配置文件D:\blog_config.yml里面的主题名称就好了。关于主题的选择，每个人的喜好不同，你可以到<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官方主题</a>页面选择自己喜欢的主题。我选用的是经过自己修改的NexT主题。后面都是针对于NexT主题的介绍。说明一点：使用他人的主题，一定要保留主题作者的信息（在博客最下面显示），表示对作者的尊重。<br>遇到喜欢的主题后，找到主题的github链接；在blog目录下右键单击选择<code>Git Bash</code>，输入以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next.git themes/next</span><br></pre></td></tr></table></figure></p>
 <p>在blog目录的themes文件夹下会找到获得的主题文件夹<code>next</code>；之后在blog目录下的_config.yml文件中找到如下字段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line">theme: landscape   <span class="comment">#将该字段更改我们新获取的主题文件夹名就好</span></span><br></pre></td></tr></table></figure></p>
 <p>我这里是使用的next主题，就将该字段更改为next</p>
@@ -374,10 +375,10 @@
 <p><strong>解决办法3：</strong><br>找到Github快捷方式，进入后登陆账号即可。<br>此法，配置还是https<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/用户名/用户名.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
 <p>3种方法适合不同的人，选择自己适用的，如不知道依次试，总有一个可以解决你的问题。</p>
 <h2 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h2><p>因为发布后是覆盖方式，即后一次的发布将完全覆盖上次的发布，如果你有多台电脑，而且每台电脑你都有可能会写博客。那么这个时候就需要对Hexo进行版本控制了。版本控制的主要目的是方便在不同的电脑维护Hexo及写作。这里利用github的分支来保存hexo框架的相关文件(hexo配置、md、主题等文件)到github page仓库。</p>
-<p><strong>新建Hexo分支</strong>page仓库的master分支用来存放网站文件的，这是GitHub Page的要求，所以只好新建分支来保存Hexo原始文件，在下图的输入框输入分支名并按回车即完成分支创建。<br><img src="https://oi4b45295.qnssl.com/hexo_3.png" alt=""><br><strong>设置默认分支</strong>因为我们写博客更多的是更新这个分支，网站文件所在的master分支则由hexo d命令发布文章的时候进行发布，所以我们将hexo分支&gt;设置为默认分支，这样我们在新的电脑环境下git clone该仓库时，自动切到hexo分支。按下图进行操作。<br><img src="https://oi4b45295.qnssl.com/hexo_4.png" alt=""></p>
+<p><strong>新建Hexo分支</strong>page仓库的master分支用来存放网站文件的，这是GitHub Page的要求，所以只好新建分支来保存Hexo原始文件，在下图的输入框输入分支名并按回车即完成分支创建。<br><img src="https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/hexo_3.png" alt=""><br><strong>设置默认分支</strong>因为我们写博客更多的是更新这个分支，网站文件所在的master分支则由hexo d命令发布文章的时候进行发布，所以我们将hexo分支&gt;设置为默认分支，这样我们在新的电脑环境下git clone该仓库时，自动切到hexo分支。按下图进行操作。<br><img src="https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/hexo_4.png" alt=""></p>
 <p>然后使用部署命令<code>hexo g -d</code>就会自动渲染Markdown文件生成静态文件（public文件夹下所有文件）并部署到yourname.github.io仓库的master分支上，这时再访问<a href="http://yourname.github.io" target="_blank" rel="noopener">http://yourname.github.io</a> 就可以看到博客页面了。</p>
 <h2 id="拷贝仓库"><a href="#拷贝仓库" class="headerlink" title="拷贝仓库"></a>拷贝仓库</h2><p>此时博客页面是部署保存了，但hexo配置、md、主题等文件还没有保存，创建新的文件夹，拷贝仓库，用于将hexo的配置发布到hexo分支上。在新创建的目录中执行以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/yourname/yourname.github.io.git</span><br></pre></td></tr></table></figure></p>
-<h2 id="部署要上传hexo配置"><a href="#部署要上传hexo配置" class="headerlink" title="部署要上传hexo配置"></a>部署要上传hexo配置</h2><p>在新创建的文件夹中，将本地修改好的hexo配置文件拷贝到新创建的目录；需要拷贝的内容见下图；（以下是必须要拷贝的内容）<br><img src="https://oi4b45295.qnssl.com/hexo_5.png" alt=""><br>完成以上的拷贝后就可以提交到hexo分支了。</p>
+<h2 id="部署要上传hexo配置"><a href="#部署要上传hexo配置" class="headerlink" title="部署要上传hexo配置"></a>部署要上传hexo配置</h2><p>在新创建的文件夹中，将本地修改好的hexo配置文件拷贝到新创建的目录；需要拷贝的内容见下图；（以下是必须要拷贝的内容）<br><img src="https://blog-images-1258448410.cos.ap-chengdu.myqcloud.com/blog-images/hexo_5.png" alt=""><br>完成以上的拷贝后就可以提交到hexo分支了。</p>
 <h2 id="提交网站相关文件"><a href="#提交网站相关文件" class="headerlink" title="提交网站相关文件"></a>提交网站相关文件</h2><p>在新创建的目录中执行以下命令：（用于将hexo配置及主题配置提交到github）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m “你要写的描述”</span><br><span class="line">git push origin hexo</span><br></pre></td></tr></table></figure></p>
 <h2 id="生成网站并发布到github上"><a href="#生成网站并发布到github上" class="headerlink" title="生成网站并发布到github上"></a>生成网站并发布到github上</h2><p>这个就比较简单了，如果配置都按以上操作，只要执行<code>hexo g -d</code>后，去刷新你的博客吧。</p>
 <h2 id="日常使用"><a href="#日常使用" class="headerlink" title="日常使用"></a>日常使用</h2><p><strong>已有环境下</strong></p>
