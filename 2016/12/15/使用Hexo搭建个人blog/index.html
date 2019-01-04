@@ -1,0 +1,701 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="Hexo,Github,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
+
+
+
+
+
+
+<meta name="keywords" content="Hexo,Github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Hexo搭建个人blog">
+<meta property="og:url" content="http://yoursite.com/2016/12/15/使用Hexo搭建个人blog/index.html">
+<meta property="og:site_name" content="Keliet">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://oi4b45295.qnssl.com/Hexo_title.png">
+<meta property="og:image" content="https://oi4b45295.qnssl.com/hexo_1.png">
+<meta property="og:image" content="https://oi4b45295.qnssl.com/hexo_2.png">
+<meta property="og:image" content="https://oi4b45295.qnssl.com/hexo_3.png">
+<meta property="og:image" content="https://oi4b45295.qnssl.com/hexo_4.png">
+<meta property="og:image" content="https://oi4b45295.qnssl.com/hexo_5.png">
+<meta property="og:updated_time" content="2019-01-04T09:57:26.608Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用Hexo搭建个人blog">
+<meta name="twitter:image" content="https://oi4b45295.qnssl.com/Hexo_title.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/12/15/使用Hexo搭建个人blog/">
+
+
+
+
+
+  <title> 使用Hexo搭建个人blog | Keliet </title>
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Keliet</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/15/使用Hexo搭建个人blog/">
+
+  <span style="display:none" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Keliet">
+    <span style="display:none" itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Keliet" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                使用Hexo搭建个人blog
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-15T00:00:00+08:00">
+                2016-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Other/" itemprop="url" rel="index">
+                    <span itemprop="name">Other</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://oi4b45295.qnssl.com/Hexo_title.png" alt=""><br><a id="more"></a></p>
+<h1 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h1><p>在开始之前，简单说明一下整个博客的一个搭建过程：</p>
+<ul>
+<li><strong>本地部署</strong></li>
+<li><strong>远程部署</strong></li>
+<li><strong>图片存储</strong></li>
+<li><strong>写文章</strong></li>
+<li><strong>发布</strong></li>
+</ul>
+<hr>
+<h1 id="本地部署"><a href="#本地部署" class="headerlink" title="本地部署"></a>本地部署</h1><h2 id="安装相关软件"><a href="#安装相关软件" class="headerlink" title="安装相关软件"></a>安装相关软件</h2><p>安装<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>和<a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a><br>安装过程一路默认，需要的话可更改安装目录</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>Hexo的安装需要借助Node.js的<code>npm</code>命令，可以理解为Hexo是Node.js的模块。操作的方式是在任意的位置单击鼠标右键，选择Git bash命令，或者直接点击Git Shell快捷方式，在里面输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install  -g  hexo</span><br></pre></td></tr></table></figure></p>
+<p>其中<code>-g</code>代表使用全局安装；卸载的话，将上面的命令中的<code>intall</code>更换为<code>uninstall</code>就可以了。</p>
+<h2 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h2><p>在某个盘符下创建一个目录，重命名（最好是英文），例如你在D盘中创建了一个blog目录，那么路径就是D:\blog，后续的很多操作都会在这个目录中；在该目录单击右键，选择<code>Git bash</code>，输入以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure></p>
+<p>成功后，会在选中目录中自动生成如下结构</p>
+<p><img src="https://oi4b45295.qnssl.com/hexo_1.png" alt=""><br><strong>安装依赖包</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure></p>
+<p>成功后，会在选中目录中自动生成<code>node_modules</code>目录；一系列的安装后，本地博客就搭建完毕了，输入如下的命令（也可以利用组合命令）先输入<code>hexo g</code>再输入<code>hexo s</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">D:\blog&gt; hexo g</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 558 ms</span><br><span class="line">INFO  Generated:</span><br><span class="line">\\省略部分结果</span><br></pre></td></tr></table></figure></p>
+<p>使用<code>hexo g</code>，不出意外，会在blog目录中生成public目录和db.json文件，其中public就是我们博客的静态页面，远程部署的时候就是将该目录中的所有文件上传至服务器。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">D:\blog&gt; hexo s</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure></p>
+<p>组合命令：<code>hexo s -g</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">D:\blog&gt; hexo s -g</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure></p>
+<p>在浏览器中地址栏输入<code>localhost:4000</code>就可以看到本地部署的效果了，就如下图的样子，这里的是本地博客，其他地方还看不到的；<br><img src="https://oi4b45295.qnssl.com/hexo_2.png" alt=""></p>
+<h2 id="安装Hexo主题"><a href="#安装Hexo主题" class="headerlink" title="安装Hexo主题"></a>安装Hexo主题</h2><p>使用Hexo更换主题还算方便，先使用克隆命令安装好主题，然后更改一下博客的配置文件D:\blog_config.yml里面的主题名称就好了。关于主题的选择，每个人的喜好不同，你可以到<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官方主题</a>页面选择自己喜欢的主题。我选用的是经过自己修改的NexT主题。后面都是针对于NexT主题的介绍。说明一点：使用他人的主题，一定要保留主题作者的信息（在博客最下面显示），表示对作者的尊重。<br>遇到喜欢的主题后，找到主题的github链接；在blog目录下右键单击选择<code>Git Bash</code>，输入以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next.git themes/next</span><br></pre></td></tr></table></figure></p>
+<p>在blog目录的themes文件夹下会找到获得的主题文件夹<code>next</code>；之后在blog目录下的_config.yml文件中找到如下字段：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line">theme: landscape   <span class="comment">#将该字段更改我们新获取的主题文件夹名就好</span></span><br></pre></td></tr></table></figure></p>
+<p>我这里是使用的next主题，就将该字段更改为next</p>
+<h2 id="博客配置"><a href="#博客配置" class="headerlink" title="博客配置"></a>博客配置</h2><p>博客搭建完毕，就可以根据自己的爱好对Hexo生成的网站进行设置了，对整站的设置置分为整体配置和主题配置。<br>先来看看博客的<strong>整体配置</strong>，也就是打开blog目录中的<code>_config.yml</code>文件，更改里面的部分内容。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Hexo Configuration</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/configuration.html</span></span><br><span class="line"><span class="comment">## Source: https://github.com/hexojs/hexo/</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Site</span></span><br><span class="line">title:                       <span class="comment">#填写网站名，会在标签页上显示</span></span><br><span class="line">subtitle:                    <span class="comment">#网站副标题</span></span><br><span class="line">description:                 <span class="comment">#网站描述，便于搜索引擎用关键词检索</span></span><br><span class="line">author:                      <span class="comment">#作者</span></span><br><span class="line">language: zh-Hans            <span class="comment">#语言，具体配置与使用主题有关，查看主题文档</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line">url: http://yoursite.com</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line"></span><br><span class="line"><span class="comment"># Directory</span></span><br><span class="line">source_dir: source</span><br><span class="line">public_dir: public</span><br><span class="line">tag_dir: tags</span><br><span class="line">archive_dir: archives</span><br><span class="line">category_dir: categories</span><br><span class="line">code_dir: downloads/code</span><br><span class="line">i18n_dir: :lang</span><br><span class="line">skip_render:</span><br><span class="line"></span><br><span class="line"><span class="comment"># Writing</span></span><br><span class="line">new_post_name: :title.md <span class="comment"># File name of new posts</span></span><br><span class="line">default_layout: post <span class="comment">#l post  、draft、page         #文章、草稿、页面</span></span><br><span class="line">titlecase: true <span class="comment"># Transform title into titlecase</span></span><br><span class="line">external_link: true <span class="comment"># Open external links in new tab</span></span><br><span class="line">filename_case: <span class="number">0</span></span><br><span class="line">render_drafts: false</span><br><span class="line">post_asset_folder: false</span><br><span class="line">relative_link: false</span><br><span class="line">future: true</span><br><span class="line">highlight:</span><br><span class="line">  enable: true</span><br><span class="line">  line_number: true</span><br><span class="line">  auto_detect: false</span><br><span class="line">  tab_replace:</span><br><span class="line"></span><br><span class="line"><span class="comment"># Category &amp; Tag</span></span><br><span class="line">default_category: uncategorized</span><br><span class="line">category_map:</span><br><span class="line">tag_map:</span><br><span class="line"></span><br><span class="line"><span class="comment"># Date / Time format</span></span><br><span class="line"><span class="comment">## Hexo uses Moment.js to parse and display date</span></span><br><span class="line"><span class="comment">## You can customize the date format as defined in</span></span><br><span class="line"><span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line">date_format: YYYY-MM-DD</span><br><span class="line">time_format: HH:mm:ss</span><br><span class="line"></span><br><span class="line"><span class="comment"># Pagination</span></span><br><span class="line"><span class="comment">## Set per_page to 0 to disable pagination</span></span><br><span class="line">per_page: <span class="number">12</span>               <span class="comment">#每页显示12篇文章</span></span><br><span class="line">pagination_dir: page</span><br><span class="line">archive: <span class="number">1</span></span><br><span class="line">category: <span class="number">1</span></span><br><span class="line">tag: <span class="number">1</span></span><br><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line">theme: landscape</span><br><span class="line">fancybox: true</span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:                      <span class="comment">#github相关配置，主要用于，将生成网站上传至github</span></span><br><span class="line"> type: git</span><br><span class="line"> repo: https://github.com/keliet/keliet.github.io.git</span><br><span class="line"> branch: master</span><br></pre></td></tr></table></figure></p>
+<p>有关详细说明请查阅<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">Hexo文档</a>其中有更详细的说明；整体配置设置完以后 。<br>再来看看<strong>主题配置</strong>，在主题文件夹下找到<code>_config.yml</code>文件；其中各个字段的说明，请查看next主题的<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">说明文档</a>，已经说的非常清楚了。</p>
+<h1 id="Hexo-常用命令说明"><a href="#Hexo-常用命令说明" class="headerlink" title="Hexo 常用命令说明"></a>Hexo 常用命令说明</h1><h1 id="远程部署"><a href="#远程部署" class="headerlink" title="远程部署"></a>远程部署</h1><hr>
+<p>远程部署流程，简单说明一下整个过程：</p>
+<ul>
+<li><strong>创建仓库</strong></li>
+<li><strong>创建分支</strong></li>
+<li><strong>拷贝仓库</strong></li>
+<li><strong>部署要上传hexo配置</strong></li>
+<li><strong>提交网站相关文件</strong></li>
+<li><strong>生成网站并发布到github上</strong></li>
+<li><strong>日常使用</strong></li>
+</ul>
+<hr>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>远程部署可部署到自己的服务器上，也可以托管到Github上，这里我只说一下Github方式。因为是托管到Github上，所以第一步需要注册一个账号。已有账号的自行忽略。</p>
+<p><strong>第一步：</strong>建立和用户名相对应的仓库，以我的例子来说，我的用户名是keliet,那么我的仓库就必须是keliet.github.io，否则可能就不成功。</p>
+<p><strong>第二步：</strong>远程代码是基于SSH的，所以需要SSH的相关配置。方法是现在本地生成SSH公钥，然后添加到Github上面。具体的操作如下：</p>
+<p><strong>1、检查你电脑上现有的ssh key：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls ~/. ssh 检查本机的ssh密钥</span><br></pre></td></tr></table></figure></p>
+<p>如果提示：No such file or directory 说明没有找到，说明本地没有ssh密钥。</p>
+<p><strong>2、生成新的SSH Key：设置你的邮箱和用户名</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;keliet1021@gmail.com&quot;</span><br><span class="line">git config --global user.name &quot;keliet&quot;</span><br></pre></td></tr></table></figure></p>
+<p>接下来生成密钥，过程中会要设置密码，输入的密码不显示（第一次为设置密钥文件名，第二和第三就是密码与密码确认）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;keliet@gmail.com&quot;</span><br></pre></td></tr></table></figure></p>
+<p>注意其中的-C是大写。上述的命令成功后，会得到id_rsa和id_rsa.pub两个文件，可能在<code>C:\Users\Administrator\.ssh</code>文件夹里。</p>
+<p><strong>3、把ssh密钥添加至Github上</strong><br>登陆Github后，点击settings，然后进入SSH keys，把id_rsa.pub文件里内容添加进去就好了。</p>
+<p><strong>4、配置相关Github信息</strong><br>编辑D:\blog目录下的配置文件_config.yml,找到deploy字段，输入以下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/你的用户名/你的用户名.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<p>输入命令<code>hexo d -g</code>，完成远程部署；出现下面的提示表示部署成功；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO Deploy done: git</span><br></pre></td></tr></table></figure></p>
+<p>部署过程中遇到问题及解决办法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"> create mode 100644 vendors/velocity/velocity.min.js</span><br><span class="line"> create mode 100644 vendors/velocity/velocity.ui.js</span><br><span class="line"> create mode 100644 vendors/velocity/velocity.ui.min.js</span><br><span class="line">replaced by CRLF in vendors/jquery/index.js.</span><br><span class="line">The file will have its original line endings in your working directory.</span><br><span class="line">warning: LF will be replaced by CRLF in vendors/velocity/velocity.js.</span><br><span class="line">The file will have its original line endings in your working directory.</span><br><span class="line">warning: LF will be replaced by CRLF in vendors/velocity/velocity.min.js.</span><br><span class="line">The file will have its original line endings in your working directory.</span><br><span class="line">warning: LF will be replaced by CRLF in vendors/velocity/velocity.ui.js.</span><br><span class="line">The file will have its original line endings in your working directory.</span><br><span class="line">warning: LF will be replaced by CRLF in vendors/velocity/velocity.ui.min.js.</span><br><span class="line">The file will have its original line endings in your working directory.</span><br><span class="line">bash: /dev/tty: No such device or address</span><br><span class="line">error: failed to execute prompt script (exit code 1)</span><br><span class="line">fatal: could not read Username for &apos;https://github.com&apos;: No error</span><br><span class="line">FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line">Error: bash: /dev/tty: No such device or address</span><br><span class="line">error: failed to execute prompt script (exit code 1)</span><br><span class="line">fatal: could not read Username for &apos;https://github.com&apos;: No error</span><br><span class="line"></span><br><span class="line">    at ChildProcess.&lt;anonymous&gt; (E:\zan\www\gitpages\hexo\zanjs.github.io\node_modules\hexo-deployer-git\node_modules\hexo-util\lib\spawn.js:42:17)</span><br><span class="line">    at emitTwo (events.js:87:13)</span><br><span class="line">    at ChildProcess.emit (events.js:172:7)</span><br><span class="line">    at maybeClose (internal/child_process.js:818:16)</span><br><span class="line">    at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)</span><br></pre></td></tr></table></figure></p>
+<p><strong>解决办法1：</strong><br>配置Deployment首先，你需要为自己配置身份信息，打开命令行，然后输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br></pre></td></tr></table></figure></p>
+<p>以上做完还不行<br>删掉blog目录下的文件夹<code>.deploy_git</code>，重新deploy就可以了。 </p>
+<p><strong>解决办法2：</strong><br>将博客配置<code>_config.yml</code>中的deploy:配置为ssh模式，如下所示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:用户名/用户名.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<p><strong>解决办法3：</strong><br>找到Github快捷方式，进入后登陆账号即可。<br>此法，配置还是https<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/用户名/用户名.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<p>3种方法适合不同的人，选择自己适用的，如不知道依次试，总有一个可以解决你的问题。</p>
+<h2 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h2><p>因为发布后是覆盖方式，即后一次的发布将完全覆盖上次的发布，如果你有多台电脑，而且每台电脑你都有可能会写博客。那么这个时候就需要对Hexo进行版本控制了。版本控制的主要目的是方便在不同的电脑维护Hexo及写作。这里利用github的分支来保存hexo框架的相关文件(hexo配置、md、主题等文件)到github page仓库。</p>
+<p><strong>新建Hexo分支</strong>page仓库的master分支用来存放网站文件的，这是GitHub Page的要求，所以只好新建分支来保存Hexo原始文件，在下图的输入框输入分支名并按回车即完成分支创建。<br><img src="https://oi4b45295.qnssl.com/hexo_3.png" alt=""><br><strong>设置默认分支</strong>因为我们写博客更多的是更新这个分支，网站文件所在的master分支则由hexo d命令发布文章的时候进行发布，所以我们将hexo分支&gt;设置为默认分支，这样我们在新的电脑环境下git clone该仓库时，自动切到hexo分支。按下图进行操作。<br><img src="https://oi4b45295.qnssl.com/hexo_4.png" alt=""></p>
+<p>然后使用部署命令<code>hexo g -d</code>就会自动渲染Markdown文件生成静态文件（public文件夹下所有文件）并部署到yourname.github.io仓库的master分支上，这时再访问<a href="http://yourname.github.io" target="_blank" rel="noopener">http://yourname.github.io</a> 就可以看到博客页面了。</p>
+<h2 id="拷贝仓库"><a href="#拷贝仓库" class="headerlink" title="拷贝仓库"></a>拷贝仓库</h2><p>此时博客页面是部署保存了，但hexo配置、md、主题等文件还没有保存，创建新的文件夹，拷贝仓库，用于将hexo的配置发布到hexo分支上。在新创建的目录中执行以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/yourname/yourname.github.io.git</span><br></pre></td></tr></table></figure></p>
+<h2 id="部署要上传hexo配置"><a href="#部署要上传hexo配置" class="headerlink" title="部署要上传hexo配置"></a>部署要上传hexo配置</h2><p>在新创建的文件夹中，将本地修改好的hexo配置文件拷贝到新创建的目录；需要拷贝的内容见下图；（以下是必须要拷贝的内容）<br><img src="https://oi4b45295.qnssl.com/hexo_5.png" alt=""><br>完成以上的拷贝后就可以提交到hexo分支了。</p>
+<h2 id="提交网站相关文件"><a href="#提交网站相关文件" class="headerlink" title="提交网站相关文件"></a>提交网站相关文件</h2><p>在新创建的目录中执行以下命令：（用于将hexo配置及主题配置提交到github）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m “你要写的描述”</span><br><span class="line">git push origin hexo</span><br></pre></td></tr></table></figure></p>
+<h2 id="生成网站并发布到github上"><a href="#生成网站并发布到github上" class="headerlink" title="生成网站并发布到github上"></a>生成网站并发布到github上</h2><p>这个就比较简单了，如果配置都按以上操作，只要执行<code>hexo g -d</code>后，去刷新你的博客吧。</p>
+<h2 id="日常使用"><a href="#日常使用" class="headerlink" title="日常使用"></a>日常使用</h2><p><strong>已有环境下</strong></p>
+<p>在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理。<br><strong>1.</strong>同步之前写的博客，在你的仓库目录下执行<code>git pull</code>；<br><strong>2. </strong>依次执行<code>git add .</code>,<code>git commit -m &quot;...&quot;</code>、<code>git push origin hexo</code>指令将改动推送到GitHub（此时当前分支应为hexo）；<br><strong>3.</strong> 然后才执行<code>hexo g -d</code>发布网站到master分支上。<br>虽然后两个过程顺序调转一般不会有问题，不过逻辑上这样的顺序是绝对没问题的（例如突然死机要重装了，悲催….的情况，调转顺序就有问题了）</p>
+<p><strong>新环境</strong></p>
+<p>到了新的电脑上时，我们需要将项目先下载到本地，然后再进行本地部署即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/yourname/yourname.github.io.git</span><br><span class="line">cd yourname.github.io</span><br><span class="line">npm install hexo</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git –save</span><br></pre></td></tr></table></figure></p>
+<p>之后开始写博客，写好部署好之后，别忘记 <code>git add .</code>，<code>git commit -m &quot;你的描述&quot;</code>，<code>git push origin hexo</code>推上去</p>
+<h1 id="图片存储"><a href="#图片存储" class="headerlink" title="图片存储"></a>图片存储</h1><p>想要在文章中插入图片的话，可以按照Markdown语法来插入，格式<code>![图片名称](图片地址)</code>图片的存放有两种方式：<br>1、在本地<code>D:\blog\source</code>目录下新建一个存放图片的文件夹，比如images，然后把想要插入的图片放在里面，插入图片的路径；</p>
+<p>2、第二种方法是把图片上传到网络，然后插入图片路径。推荐使用第二种。<br>本人将图片存在七牛上，在本地任意位置创建图片文件夹，把文章要用的图片存入该文件夹，在七牛开发者中心下载<a href="http://developer.qiniu.com/code/v6/tool/qrsbox.html" target="_blank" rel="noopener">qrsbox</a>，直接运行qrbox，并在其中设置要同步的图片文件夹，图片会自动同步到七牛服务器</p>
+<h1 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h1><p>文章格式如下：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title:            #文章标题</span><br><span class="line">categories:       #文章分类</span><br><span class="line">tags:             #文章标签</span><br><span class="line">  - Hexo</span><br><span class="line">  - Github</span><br><span class="line">date: 2016-12-15  #日期</span><br><span class="line">---</span><br><span class="line">这之后就是文章正文了</span><br></pre></td></tr></table></figure></p>
+<p>写文章本人采用<a href="http://markdownpad.com/" target="_blank" rel="noopener">Markdown pad 2</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+            <a href="/tags/Github/" rel="tag"># Github</a>
+          
+        </div>
+      
+
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="">
+          <p class="site-author-name" itemprop="name"></p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建过程"><span class="nav-number">1.</span> <span class="nav-text">搭建过程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本地部署"><span class="nav-number">2.</span> <span class="nav-text">本地部署</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装相关软件"><span class="nav-number">2.1.</span> <span class="nav-text">安装相关软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化Hexo"><span class="nav-number">2.3.</span> <span class="nav-text">初始化Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo主题"><span class="nav-number">2.4.</span> <span class="nav-text">安装Hexo主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客配置"><span class="nav-number">2.5.</span> <span class="nav-text">博客配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-常用命令说明"><span class="nav-number">3.</span> <span class="nav-text">Hexo 常用命令说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#远程部署"><span class="nav-number">4.</span> <span class="nav-text">远程部署</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建仓库"><span class="nav-number">4.1.</span> <span class="nav-text">创建仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建分支"><span class="nav-number">4.2.</span> <span class="nav-text">创建分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拷贝仓库"><span class="nav-number">4.3.</span> <span class="nav-text">拷贝仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署要上传hexo配置"><span class="nav-number">4.4.</span> <span class="nav-text">部署要上传hexo配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提交网站相关文件"><span class="nav-number">4.5.</span> <span class="nav-text">提交网站相关文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成网站并发布到github上"><span class="nav-number">4.6.</span> <span class="nav-text">生成网站并发布到github上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日常使用"><span class="nav-number">4.7.</span> <span class="nav-text">日常使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图片存储"><span class="nav-number">5.</span> <span class="nav-text">图片存储</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写文章"><span class="nav-number">6.</span> <span class="nav-text">写文章</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"></span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+<script>
+$(function(){
+	
+	$('.post-title .post-title-link').each(function(){
+		var url = $(this).attr('href');
+		$(this).parent().parent().prev('.post-body').click(function(){
+			window.location.href = url;
+		});
+		var imgUrl = $(this).parent().parent().prev('.post-body').find('img').attr('src');
+		$(this).parent().parent().prev('.post-body').find('p').html('<img src="'+ imgUrl +'" />');
+		
+	});
+});
+</script>
+
+</body>
+</html>
